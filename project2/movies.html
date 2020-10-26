@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+    .center-block{
+      display: block; 
+      margin: auto;
+      width: 90%;
+    }
+    .center-element{
+      display: block; 
+      margin: auto;
+      width: 30%;
+      padding:8px;
+      border-radius: 5px;
+    }
+    h1,h2,h3,h4,h5,p{
+      font-family: arial, sans-serif;
+      color:#CFD8DC;
+    }
+    a:link{
+      color:  #EEEEEE
+    }
+    a:visited{
+      color:  #CFD8DC
+    }
+    img{
+      align : middle;
+    }
+    table {
+    font-family: arial, sans-serif;
+    align = middle;   
+  /*  border-collapse: collapse;*/
+    padding: 16px;
+    border-radius: 15px;
+    border-color: #000000
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: center;
+    color:#CFD8DC;
+    padding: 8px;
+}
+
+  </style>
+    <title>Display Movie Information</title>
+    <meta charset="utf-8"/>
+    <script type="text/javascript" src="./movies.js"></script>
+  </head>
+  <body onload="initialize();" style="background: #2c3e50;">
+    <form>
+      <div class="center-block" style = "border-radius: 15px; background: #34495e; padding: 32px;">
+       <label class="center-element" style="color: #CFD8DC">Movie title: <input " type="text" id="form-input" /></label>
+       <input class="center-element" type="button" onclick="search();" value="Display Info"/>
+     </div>
+    </form>
+    <div id="movieList" style="width: 49%; float: left;">
+    </div>
+    <div id="movieDetail"style="width: 49%; float: right;">
+    </div>
+  </body>
+</html>

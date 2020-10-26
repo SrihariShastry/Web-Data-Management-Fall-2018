@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!-- Student Name: Shastry Srihari  -->
+<html lang="en">
+  <head>
+    <title>Web Mashup: Display Best Restaurants on a Map</title>
+    <meta charset="utf-8"/>
+    <script type="text/javascript" src="yelp.js"></script>
+    <style>
+      img{ height: 55px;
+          width: 55px; }
+      li{ padding: 8px;
+          color: #ecf0f1; }
+      a{  padding: 8px;}
+      a:link{ color: #ecf0f1; }
+      a:visited{color: #bdc3c7; }
+    th{border: 1px solid black;}
+    </style>
+  </head>
+  <body style="background: #34495e;">
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDlxbfwAAkGiDfidL8V999XjmPGCPffNnI&libraries=geometry&callback=initializeMaps"
+        type="text/javascript"></script>
+    <div style="margin:auto; text-align: center; padding: 16px;">
+    <form>
+       <label style="color: #ecf0f1;">Search Term: <input type="text"  style="padding-left: 8px; height:25px; border-radius: 5px;" id="search"/></label>
+       <input id="searchBtn" style="width: 90px; height:30px; border-radius: 5px;" type="button" onclick="sendRequest();" value="Find"/>
+    </form>
+  </div>
+    <div>
+        <div id = "map" style=" padding: 8px; border:solid; width: 600px; height: 500px; float: left;"></div>
+        <div id = "output" style="float: left;padding-left: 48px;">&nbsp;</div>
+    </div>
+  </body>
+</html>
